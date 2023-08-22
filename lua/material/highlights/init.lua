@@ -26,22 +26,22 @@ M.main_highlights.syntax = function()
     local syntax_hls = {
         Identifier     = { fg = e.fg },
         Comment        = { fg = s.comments },
-        Keyword        = { fg = s.keyword },
-        Conditional    = { fg = s.keyword },
+        Keyword        = { fg = s.keyword, bold = true  },
+        Conditional    = { fg = s.keyword , bold = true },
         Function       = { fg = s.fn },
-        Repeat         = { fg = s.keyword },
-        String         = { fg = s.string },
-        Type           = { fg = s.type },
-        StorageClass   = { fg = m.cyan }, -- static, register, volatile, etc.
+        Repeat         = { fg = s.keyword, bold = true  },
+        String         = { fg = s.string , bold = true  },
+        Type           = { fg = s.type, bold = true  },
+        StorageClass   = { fg = m.cyan, bold = true  }, -- static, register, volatile, etc.
         Structure      = { fg = s.type },
         SpecialComment = { link = "Comment" }, -- special things inside a comment
-        Constant       = { fg = m.yellow },
-        Number         = { fg = s.value },
+        Constant       = { fg = m.yellow, bold = true  },
+        Number         = { fg = s.value , bold = true },
         Character      = { link = "Number" },
-        Boolean        = { link = "Number" },
-        Float          = { link = "Number" },
-        Statement      = { fg = m.cyan },
-        Label          = { fg = s.keyword }, -- case, default, etc.
+        Boolean        = { link = "Number", bold = true  },
+        Float          = { link = "Number", bold = true  },
+        Statement      = { fg = m.cyan, bold = true  },
+        Label          = { fg = s.keyword, bold = true  }, -- case, default, etc.
         Operator       = { fg = s.operator },
         Exception      = { fg = m.red },
         Macro          = { fg = m.cyan },
@@ -89,7 +89,7 @@ M.main_highlights.treesitter = function()
             ["@variable.builtin"] = { link = "Identifier" },
             ["@field"]            = { fg = e.fg_dark },
             ["@property"]         = { fg = e.fg_dark },
-            ["@parameter"]        = { link = "Identifier" }, -- TODO
+            ["@parameter"]        = { fg = "#7a61e7", italic = true }, -- TODO
             ["@symbol"]           = { fg = m.yellow },
 
             ["@function.builtin"] = { fg = s.fn },
@@ -100,7 +100,7 @@ M.main_highlights.treesitter = function()
 
             ["@constant"]         = { fg = m.yellow },
             ["@constant.builtin"] = { fg = m.yellow },
-            ["@constant.macro"]   = { fg = m.cyan },
+            ["@constant.macro"]   = { fg = m.yellow },
 
             ["@preproc"]   = { fg = m.cyan },
             ["@macro"]     = { fg = m.cyan },

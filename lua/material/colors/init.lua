@@ -152,8 +152,8 @@ elseif vim.g.material_style == "deep ocean" then
 
     colors.editor.bg           = "#0F111A" --
     colors.editor.bg_alt       = "#090B10"
-    colors.editor.fg           = "#8F93A2" --
-    colors.editor.fg_dark      = "#717CB4"
+    colors.editor.fg           = "#5da3e5"
+    colors.editor.fg_dark      = "#8F93A2"
     colors.editor.selection    = "#1F2233"
     colors.editor.contrast     = "#090B10"
     colors.editor.active       = "#1A1C25"

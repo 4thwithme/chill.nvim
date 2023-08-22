@@ -150,10 +150,9 @@ elseif vim.g.material_style == "palenight" then
 elseif vim.g.material_style == "deep ocean" then
     -- Deep Ocean theme style
 
-    colors.editor.bg           = "#0F111A"
+    colors.editor.bg           = "#0F111A" --
     colors.editor.bg_alt       = "#090B10"
-    colors.editor.fg           = "#A6ACCD"
-    -- colors.editor.fg_darker    = "#8DA3CA" -- TODO
+    colors.editor.fg           = "#8F93A2" --
     colors.editor.fg_dark      = "#717CB4"
     colors.editor.selection    = "#1F2233"
     colors.editor.contrast     = "#090B10"
@@ -170,7 +169,7 @@ else vim.g.material_style = "oceanic"
 
     colors.editor.bg           = "#25363B"
     colors.editor.bg_alt       = "#1C2C30"
-    colors.editor.fg           = "#B0BEC5"
+    colors.editor.fg           = colors.main.pink --
     colors.editor.fg_dark      = "#7C9EAD"
     -- colors.editor.fg_dark      = "#4B504F"
     colors.editor.selection    = "#395B65"
@@ -187,7 +186,7 @@ end
 
 ---syntax colors
 colors.syntax.variable = colors.main.darkyellow --
-colors.syntax.field    = colors.main.pink --
+colors.syntax.field    = '#B0BEC5' --
 colors.syntax.keyword  = colors.main.cyan --
 colors.syntax.value    = colors.main.orange --
 colors.syntax.operator = colors.main.cyan --

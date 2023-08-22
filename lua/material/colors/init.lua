@@ -24,6 +24,7 @@ local colors = {
         darkcyan   = "#71C6E7",
         darkpurple = "#B480D6",
         darkorange = "#E2795B",
+        punc       = "#a973cd",
     },
 
     ---colors applied to the editor

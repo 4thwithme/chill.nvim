@@ -118,8 +118,8 @@ M.main_highlights.treesitter = function()
             -- ["@storageclass"]          = { fg = m.cyan },
 
             ["@label"]                  = { fg = m.yellow },
-            ["@punctuation"]            = { fg = m.cyan },
-            ["@punctuation.delimiter"]  = { fg = m.cyan },
+            ["@punctuation"]            = { fg = m.punc },
+            ["@punctuation.delimiter"]  = { fg = m.punc },
             -- ["@punctuation.bracket"]    = { fg = m.cyan },
             -- ["@punctuation.special"]    = { fg = m.cyan },
             -- ["@text.underline"]         = { underline = true },

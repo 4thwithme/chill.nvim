@@ -318,6 +318,9 @@ M.async_highlights.load_lsp = function()
         ["@lsp.type.namespace"]  = { link = "@namespace" },
         ["@lsp.type.parameter"]  = { link = "@parameter" },
         ["@lsp.type.property"]   = { link = "@property" },
+        ['@lsp.type.enumMember'] = { link = '@constant'},
+        ['@lsp.type.decorator'] = { link = '@function'},
+        ['@lsp.type.variable'] = {  fg = "#FFCB6B", bold = true},
 
         ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
         ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },

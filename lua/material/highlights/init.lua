@@ -85,8 +85,8 @@ M.main_highlights.treesitter = function()
             ["@type.builtin"]   = { fg = s.type, bold = true },
             ["@type.qualifier"] = { fg = s.type, bold = true },
 
-            -- ["@variable"]              = { link = "Identifier" },
-            ["@variable.builtin"] = { link = "Identifier" },
+            ["@variable"]         = { link = "Identifier" },
+            ["@variable.builtin"] = { fg = "#7a61e7", italic = true , bold = true},
             ["@field"]            = { fg = e.fg_dark, bold = true },
             ["@property"]         = { fg = e.fg_dark },
             ["@parameter"]        = { fg = "#7a61e7", italic = true , bold = true}, -- TODO
@@ -320,7 +320,6 @@ M.async_highlights.load_lsp = function()
         ["@lsp.type.property"]   = { link = "@property" },
         ['@lsp.type.enumMember'] = { link = '@constant'},
         ['@lsp.type.decorator'] = { link = '@function'},
-        ['@lsp.type.variable'] = {  fg = "#FFCB6B", bold = true},
 
         ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
         ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },

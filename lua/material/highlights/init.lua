@@ -83,12 +83,12 @@ M.main_highlights.treesitter = function()
         local treesitter_hls = {
             ["@type"]           = { fg = s.type, bold = true },
             ["@type.builtin"]   = { fg = s.type, bold = true },
-            ["@type.qualifier"] = { fg = m.type, bold = true },
+            ["@type.qualifier"] = { fg = s.type, bold = true },
 
             -- ["@variable"]              = { link = "Identifier" },
             ["@variable.builtin"] = { link = "Identifier" },
             ["@field"]            = { fg = e.fg_dark, bold = true },
-            ["@property"]         = { fg = e.fg },
+            ["@property"]         = { fg = e.fg_dark },
             ["@parameter"]        = { fg = "#7a61e7", italic = true , bold = true}, -- TODO
             ["@symbol"]           = { fg = m.yellow , bold = true},
 
@@ -234,8 +234,8 @@ M.async_highlights.editor = function()
         SpellCap      = { fg = m.blue, italic = true, undercurl = true },
         SpellLocal    = { fg = m.cyan, italic = true, undercurl = true },
         SpellRare     = { fg = m.purple, italic = true, undercurl = true },
-        Warnings      = { fg = m.yellow },
-        healthError   = { fg = l.error },
+        Warnings      = { fg = m.yellow,bold = true, },
+        healthError   = { fg = l.error,bold = true,},
         healthSuccess = { fg = m.yellow },
         healthWarning = { fg = m.yellow },
         Visual        = { fg = m.none, bg = e.selection },
@@ -254,8 +254,8 @@ M.async_highlights.editor = function()
         WildMenu      = { fg = m.orange, bold = true }, -- current match in 'wildmenu' completion
         VertSplit     = { fg = e.vsplit },
         WinSeparator  = { fg = e.vsplit },
-        diffAdded     = { fg = g.added },
-        diffRemoved   = { fg = g.removed },
+        diffAdded     = { fg = g.added,bold = true, },
+        diffRemoved   = { fg = g.removed ,bold = true,},
         -- ToolbarLine   = { fg = e.fg, bg = e.bg_alt },
         -- ToolbarButton = { fg = e.fg, bold = true },
         -- NormalMode       = { fg = e.disabled }, -- Normal mode message in the cmdline
@@ -314,7 +314,7 @@ M.async_highlights.load_lsp = function()
         ["@lsp.type.enum"]       = { link = "@type" },
         ['@lsp.type.class']      = { link = "@type" },
         ["@lsp.type.keyword"]    = { link = "@keyword" },
-        ["@lsp.type.interface"]  = { link = "Type" },
+        ["@lsp.type.interface"]  = { link = "@type" },
         ["@lsp.type.namespace"]  = { link = "@namespace" },
         ["@lsp.type.parameter"]  = { link = "@parameter" },
         ["@lsp.type.property"]   = { link = "@property" },

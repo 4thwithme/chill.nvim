@@ -151,8 +151,7 @@ elseif vim.g.material_style == "palenight" then
 elseif vim.g.material_style == "deep ocean" then
     -- Deep Ocean theme style
 
-    --colors.editor.bg           = "#0F111A" --
-    colors.editor.bg           = "#111111" --
+    colors.editor.bg           = "#0F111A" --
     colors.editor.bg_alt       = "#090B10"
     colors.editor.fg           = "#5da3e5"
     colors.editor.fg_dark      = "#8F93A2"

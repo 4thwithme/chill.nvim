@@ -24,7 +24,7 @@ M.async_highlights = {}
 ---regular Vim syntax highlights
 M.main_highlights.syntax = function()
     local syntax_hls = {
-        Identifier     = { fg = e.fg,bold = true },
+        Identifier     = { fg = e.fg },
         Comment        = { fg = s.comments },
         Keyword        = { fg = s.keyword, bold = true  },
         Conditional    = { fg = s.keyword , bold = true },
@@ -33,7 +33,7 @@ M.main_highlights.syntax = function()
         String         = { fg = s.string , bold = true  },
         Type           = { fg = s.type, bold = true  },
         StorageClass   = { fg = m.cyan, bold = true  }, -- static, register, volatile, etc.
-        Structure      = { fg = s.type },
+        Structure      = { fg = s.type,bold = true },
         SpecialComment = { link = "Comment" }, -- special things inside a comment
         Constant       = { fg = m.yellow, bold = true  },
         Number         = { fg = s.value , bold = true },
@@ -42,18 +42,18 @@ M.main_highlights.syntax = function()
         Float          = { link = "Number", bold = true  },
         Statement      = { fg = m.cyan, bold = true  },
         Label          = { fg = s.keyword, bold = true  }, -- case, default, etc.
-        Operator       = { fg = s.operator },
+        Operator       = { fg = s.operator,bold = true },
         Exception      = { fg = m.red },
-        Macro          = { fg = m.cyan },
+        Macro          = { fg = m.cyan,bold = true },
         Include        = { link = "Macro" },
         -- Define         = { link = "Macro" },
         -- PreProc        = { link = "Macro" },
         -- PreCondit   = { link = "Macro" },
         -- Typedef        = { link = "Operator" },
-        Special        = { fg = m.cyan },
+        Special        = { fg = m.cyan,bold = true },
         SpecialChar    = { fg = m.red },
         Tag            = { fg = m.red },
-        Delimiter      = { fg = s.operator }, -- ;
+        Delimiter      = { fg = s.operator ,bold = true}, -- ;
         Debug          = { fg = m.red },
         htmlLink       = { fg = e.link, underline = true },
         -- htmlH1         = { fg = m.cyan, bold = true },
@@ -94,9 +94,9 @@ M.main_highlights.treesitter = function()
 
             ["@function.builtin"] = { fg = s.fn, bold = true },
             -- ["@function.macro"]   = { link = "Function" },
-            ["@constructor"]      = { fg = m.blue },
+            ["@constructor"]      = { fg = m.blue , bold = true },
 
-            ["@keyword"] = { fg = m.cyan },
+            ["@keyword"] = { fg = m.cyan , bold = true  },
 
             ["@constant"]         = { fg = m.yellow, bold = true },
             ["@constant.builtin"] = { fg = m.yellow , bold = true},
@@ -126,15 +126,15 @@ M.main_highlights.treesitter = function()
             ["@text.emphasis"]          = { italic = true },
             ["@text.strong"]            = { bold = true },
             ["@text.title"]             = { fg = m.cyan, bold = true },
-            ["@text.literal"]           = { fg = m.green },
+            ["@text.literal"]           = { fg = m.green, bold = true  },
             ["@text.uri"]               = { fg = e.link },
-            ["@text.note"]              = { fg = m.yellow },
+            ["@text.note"]              = { fg = m.yellow, bold = true  },
             ["@text.environment"]       = { fg = m.red },
             ["@text.environment.name"]  = { fg = m.red },
             -- ["@text.warning"]           = { fg = l.warning },
             -- ["@text.danger"]            = { fg = l.error },
             ["@tag"]                    = { fg = m.red },
-            ["@tag.delimiter"]          = { fg = m.cyan },
+            ["@tag.delimiter"]          = { fg = m.cyan, bold = true  },
             ["@tag.attribute"]          = { fg = m.purple },
             TreesitterContext           = { bg = e.contrast },
             TreesitterContextLineNumber = { fg = e.line_numbers, bg = e.contrast },

@@ -24,7 +24,7 @@ M.async_highlights = {}
 ---regular Vim syntax highlights
 M.main_highlights.syntax = function()
     local syntax_hls = {
-        Identifier     = { fg = e.fg },
+        Identifier     = { fg = e.fg,bold = true },
         Comment        = { fg = s.comments },
         Keyword        = { fg = s.keyword, bold = true  },
         Conditional    = { fg = s.keyword , bold = true },
@@ -102,9 +102,9 @@ M.main_highlights.treesitter = function()
             ["@constant.builtin"] = { fg = m.yellow , bold = true},
             ["@constant.macro"]   = { fg = m.yellow, bold = true },
 
-            ["@preproc"]   = { fg = m.cyan },
-            ["@macro"]     = { fg = m.cyan },
-            ["@namespace"] = { fg = m.yellow },
+            ["@preproc"]   = { fg = m.cyan, bold = true },
+            ["@macro"]     = { fg = m.cyan, bold = true },
+            ["@namespace"] = { fg = m.yellow, bold = true },
 
             ["@string.escape"]  = { fg = e.fg_dark },
             ["@string.regex"]   = { fg = m.yellow },

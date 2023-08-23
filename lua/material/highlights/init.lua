@@ -320,7 +320,7 @@ M.async_highlights.load_lsp = function()
         ["@lsp.type.property"]   = { link = "@property" },
         ['@lsp.type.enumMember'] = { link = '@constant'},
         ['@lsp.type.decorator'] = { link = '@function'},
-        ["@lsp.typemod.variable.readonly"] = { link = '@constant'},
+        ["@lsp.typemod.constant.readonly"] = { link = '@constant'},
 
         ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
         ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },

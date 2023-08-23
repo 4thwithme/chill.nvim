@@ -28,7 +28,7 @@ M.main_highlights.syntax = function()
         Comment        = { fg = s.comments },
         Keyword        = { fg = s.keyword, bold = true  },
         Conditional    = { fg = s.keyword , bold = true },
-        Function       = { fg = s.fn },
+        Function       = { fg = s.fn , bold = true },
         Repeat         = { fg = s.keyword, bold = true  },
         String         = { fg = s.string , bold = true  },
         Type           = { fg = s.type, bold = true  },
@@ -81,26 +81,26 @@ M.main_highlights.treesitter = function()
 
     if vim.fn.has("nvim-0.8.0") == 1 then
         local treesitter_hls = {
-            ["@type"]           = { fg = s.type },
-            ["@type.builtin"]   = { fg = s.type },
-            ["@type.qualifier"] = { fg = m.cyan },
+            ["@type"]           = { fg = s.type, bold = true },
+            ["@type.builtin"]   = { fg = s.type, bold = true },
+            ["@type.qualifier"] = { fg = m.type, bold = true },
 
             -- ["@variable"]              = { link = "Identifier" },
             ["@variable.builtin"] = { link = "Identifier" },
-            ["@field"]            = { fg = e.fg_dark },
+            ["@field"]            = { fg = e.fg_dark, bold = true },
             ["@property"]         = { fg = e.fg_dark },
-            ["@parameter"]        = { fg = "#7a61e7", italic = true }, -- TODO
-            ["@symbol"]           = { fg = m.yellow },
+            ["@parameter"]        = { fg = "#7a61e7", italic = true , bold = true}, -- TODO
+            ["@symbol"]           = { fg = m.yellow , bold = true},
 
-            ["@function.builtin"] = { fg = s.fn },
+            ["@function.builtin"] = { fg = s.fn, bold = true },
             -- ["@function.macro"]   = { link = "Function" },
             ["@constructor"]      = { fg = m.blue },
 
             ["@keyword"] = { fg = m.cyan },
 
-            ["@constant"]         = { fg = m.yellow },
-            ["@constant.builtin"] = { fg = m.yellow },
-            ["@constant.macro"]   = { fg = m.yellow },
+            ["@constant"]         = { fg = m.yellow, bold = true },
+            ["@constant.builtin"] = { fg = m.yellow , bold = true},
+            ["@constant.macro"]   = { fg = m.yellow, bold = true },
 
             ["@preproc"]   = { fg = m.cyan },
             ["@macro"]     = { fg = m.cyan },

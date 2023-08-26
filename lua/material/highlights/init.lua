@@ -277,10 +277,10 @@ end
 -- some plugins like lualine.nvim inherit the colors
 M.main_highlights.load_lsp   = function()
 	local lsp_hls = {
-		DiagnosticError       = { undercurl = true, fg = l.error },
-		DiagnosticWarn        = { undercurl = true, fg = l.warning },
-		DiagnosticInformation = { undercurl = true, fg = l.info },
-		DiagnosticHint        = { undercurl = true, fg = l.hint },
+		DiagnosticError       = { fg = l.error },
+		DiagnosticWarn        = { fg = l.warning },
+		DiagnosticInformation = { fg = l.info },
+		DiagnosticHint        = { fg = l.hint },
 	}
 
 	return lsp_hls

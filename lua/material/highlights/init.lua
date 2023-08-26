@@ -278,9 +278,9 @@ end
 M.main_highlights.load_lsp   = function()
 	local lsp_hls = {
 		DiagnosticError       = { undercurl = true, fg = l.error },
-		DiagnosticWarn        = { fundercurl = true, g = l.warning },
-		DiagnosticInformation = { fundercurl = true, g = l.info },
-		DiagnosticHint        = { fundercurl = true, g = l.hint },
+		DiagnosticWarn        = { undercurl = true, fg = l.warning },
+		DiagnosticInformation = { undercurl = true, fg = l.info },
+		DiagnosticHint        = { undercurl = true, fg = l.hint },
 	}
 
 	return lsp_hls
